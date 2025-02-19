@@ -38,6 +38,14 @@ function deletaPessoa(id){
     
 };
 
+function consultarPessoasId(){
+    return pessoas.filter(item => item.id == id);
+}
+
+function atualizarPessoa(id, nome, idade){
+
+}
+
 module.exports = {
     cadastrarPessoa,
     consultaTodasAsPessoas,

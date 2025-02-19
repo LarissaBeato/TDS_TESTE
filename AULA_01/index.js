@@ -9,4 +9,4 @@ console.log(pessoa.consultaTodasAsPessoas());
 pessoa.deletarPessoas(2);
 console.log(pessoa.consultaTodasAsPessoas());
 
-
+console.log(pessoa.consultarPessoasId(1));
