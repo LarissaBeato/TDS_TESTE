@@ -6,5 +6,7 @@ pessoa.cadastrarPessoa("Moreira", 17)
 
 console.log(pessoa.consultaTodasAsPessoas());
 
-pessoa.deletarPessoas(0)
+pessoa.deletarPessoas(2);
 console.log(pessoa.consultaTodasAsPessoas());
+
+

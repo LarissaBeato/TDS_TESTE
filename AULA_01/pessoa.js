@@ -18,22 +18,31 @@ function consultaTodasAsPessoas(){
     return pessoas;
 }
 function deletarPessoas(id){
-    var index = pessoas.findIndex(pessoa => pessoa.id == id);
-    if(index != -1)
-    {
-        pessoas.splice(index,1);
-        return true;
+    //pesquisar qual é a posição do item no ArrayList
+    for(let i = 0; i < pessoas.length; i++){
+        if(pessoas[i].id == id){
+            console.log(pessoas[i]);
+            pessoas.splice(i, 1);
+        }
     }
-    return false;
-
 }
 
+function deletaPessoa(id){
+//Pesquisar qual a posição do item no Arraylist
+    for (let i = 0; i < pessoas.length; i++) {
+        if(pessoas[i].id == id){
+            console.log(pessoas[i]);
+            pessoas.splice(i, 1); //Deleta o item do Arraylist
+        }
+    }
+    
+};
 
 module.exports = {
     cadastrarPessoa,
     consultaTodasAsPessoas,
     deletarPessoas
-};
+}
 
 // console.log(cadastrarPessoa("Larissa", 17));
 // console.log(consultaTodasAsPessoas());
