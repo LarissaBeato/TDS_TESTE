@@ -46,3 +46,9 @@ const pessoa = {
 console.log(pessoa);
 console.log(pessoa.nome);
 
+module.exports = {
+    somaDeDoisValores,
+    multiplicacao,
+    divisao
+}
+
