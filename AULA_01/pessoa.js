@@ -38,18 +38,36 @@ function deletaPessoa(id){
     
 };
 
-function consultarPessoasId(){
+function consultarPessoasId(id){
     return pessoas.filter(item => item.id == id);
 }
 
 function atualizarPessoa(id, nome, idade){
+
+    var teverRetorno = true;
+    for(let i = 0; i < pessoas.length; i++){
+        if(pessoas[i].id == id){
+            pessoas[i].nome = nome;
+            pessoas[i].idade = idade;
+            return pessoas[i];
+        }else{
+            teverRetorno = false;
+        }
+    }
+
+    if(teverRetorno){
+        return "o codigo da pessoa é invalido";
+    }
 
 }
 
 module.exports = {
     cadastrarPessoa,
     consultaTodasAsPessoas,
-    deletarPessoas
+    deletarPessoas,
+    consultarPessoasId,
+    atualizarPessoa
+    
 }
 
 // console.log(cadastrarPessoa("Larissa", 17));
